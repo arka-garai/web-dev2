@@ -25,5 +25,28 @@ initialArray.forEach(logThing);
 
 //callbacks, map, filter, find, sort
 
+const doubled = initialArray.map(n => n * 2);
+console.log(doubled);
+
+//all elements satisfying the condition
+const greaterThanTwo = initialArray.filter(n => n > 2);
+console.log(greaterThanTwo);
 
 
+//first match only
+const found = initialArray.find(n => n > 2);
+console.log(found);
+
+const nums = [3, 10, 2];
+nums.sort((a, b) => b - a);
+console.log(nums);
+nums.sort((a, b) => a - b);
+console.log(nums);
+
+const nums1 = [1, 2, 3, 4];
+
+const sum = nums1.reduce((acc, cur) => {
+  return acc + cur;
+}, 0);
+
+console.log(sum);
