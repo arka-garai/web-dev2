@@ -79,3 +79,21 @@ async function main() {
 
 }
 main();
+
+// write a promisified function that takes a file prefix as an input (a)
+// and cleans ({prefix}1.txt), {prefix}2.txt, {prefix}3.txt
+//
+async function cleanAllFiles(prefix) {
+  await cleanFile(prefix + "1.txt")
+  await cleanFile(prefix + "2.txt")
+  await cleanFile(prefix + "3.txt")
+}
+cleanAllFiles("a")
+  .then(() => {
+    console.log("file cleaned successfully");
+  })
+  .catch(() => {
+    console.log("error while cleaning file ewfwef wefwef");
+  })
+
+
