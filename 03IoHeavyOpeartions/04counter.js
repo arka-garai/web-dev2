@@ -8,8 +8,8 @@ function callBack() {
 
 setInterval(callBack, 1000);
 
-let x = 0;
-for (let i = 0; i < 4000000; i++) {
-  x += i;
+let sum = 0;
+for (let i = 0; i < 400000000; i++) {
+  sum += i;
 }
-console.log(x);
+console.log(sum);
